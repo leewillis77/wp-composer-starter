@@ -32,4 +32,4 @@ do
 done
 
 # Install memcached object cache drop-in.
-cp webroot/wp-content/vendor/tollmanz/wordpress-pecl-memcached-object-cache/object-cache.php webroot/wp-content/
+cp vendor/tollmanz/wordpress-pecl-memcached-object-cache/object-cache.php webroot/wp-content/
