@@ -11,7 +11,7 @@ fi
 for i in repo-wp-content/plugins/*
 do
 	slug=`basename $i`
-	if [ ! -a "webroot/wp-content/plugins/$slug" ]
+	if [ ! -e "webroot/wp-content/plugins/$slug" ]
 	then
 		ln -s "../../../$i" "webroot/wp-content/plugins/$slug"
 	fi
@@ -25,7 +25,7 @@ fi
 for i in repo-wp-content/themes/*
 do
 	slug=`basename $i`
-	if [ ! -a "webroot/wp-content/themes/$slug" ]
+	if [ ! -e "webroot/wp-content/themes/$slug" ]
 	then
 		ln -s "../../../$i" "webroot/wp-content/themes/$slug"
 	fi
