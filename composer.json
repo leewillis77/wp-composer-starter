@@ -1,0 +1,56 @@
+{
+    "name"        : "leewillis77/wp-composer-starter",
+    "description" : "Base repo for starting a WordPress site",
+    "authors"     : [
+        {
+            "name"    : "Lee Willis",
+            "homepage": "http://www.ademti-software.co.uk/"
+        }
+    ],
+    "type"        : "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "tollmanz/wordpress-pecl-memcached-object-cache",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/tollmanz/wordpress-pecl-memcached-object-cache.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require"     : {
+		"johnpbloch/wordpress"                              : ">=4.5",
+		"wpackagist-plugin/mailgun"                         : ">=1.4.1",
+		"wpackagist-plugin/simple-google-analytics-tracking": ">=1.2",
+		"wpackagist-plugin/widget-logic"                    : ">=0.57",
+		"wpackagist-plugin/wpforms-lite"                    : ">=1.1.8.4",
+		"wpackagist-plugin/zero-spam"                       : ">=2.1.1",
+		"wpackagist-plugin/autoptimize"                     : ">=2.0",
+		"wpackagist-plugin/google-sitemap-generator"        : ">=4.0",
+		"wpackagist-plugin/backupwordpress"                 : "^3.6",
+		"tollmanz/wordpress-pecl-memcached-object-cache"    : "master@dev"
+    },
+    "require-dev" : {
+        "wpackagist-plugin/debug-bar": ">=0.8.4"
+    },
+    "extra"       : {
+    	"installer-paths": {
+			"webroot/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+			"webroot/wp-content/themes/{$name}/" : ["type:wordpress-theme"]
+    	},
+        "wordpress-install-dir": "webroot"
+    },
+    "scripts"     : {
+    	"post-install-cmd": [
+    		"build-scripts/post-deploy.sh"
+    	]
+	}
+}

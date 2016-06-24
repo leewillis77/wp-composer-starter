@@ -1,0 +1,9 @@
+/*
+ Theme Name:   Site specific theme
+ Theme URI:    http://www.example.com/
+ Description:  Theme for the website.
+ Template:     twentyfifteen
+ Version:      1.0.0
+*/
+
+@import url('/wp-content/themes/twentyfifteen/style.css');

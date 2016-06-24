@@ -1,0 +1,4 @@
+webroot/
+wp-config.local.php
+.DS_Store
+node_modules
